@@ -6,6 +6,19 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Ensure Logs directory exists
 var logFolder = Path.Combine(AppContext.BaseDirectory, "Logs");
 if (!Directory.Exists(logFolder))
@@ -29,6 +42,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 var env = app.Environment;
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
@@ -68,10 +83,15 @@ app.UseExceptionHandler(errorApp =>
 // Perform database migration on startup
 using (var scope = app.Services.CreateScope())
 {
-    logger.LogInformation("Migrating database...");
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    logger.LogInformation("Migrating database...");
     db.Database.Migrate();
     logger.LogInformation("Migration complete.");
+
+    logger.LogInformation("Seeding database...");
+    DbInitializer.Seed(db);
+    logger.LogInformation("Seeding complete.");
 }
 
 app.MapControllers();

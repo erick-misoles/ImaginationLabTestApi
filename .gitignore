@@ -1,0 +1,126 @@
+# ------------------------------------
+# .NET and Visual Studio
+# ------------------------------------
+
+# Build folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# VS Code files
+.vscode/
+
+# DotNet specific files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Publish output
+publish/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.resharper
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# IIS Express
+iisexpress/
+
+# Others
+*.vspscc
+*.vssscc
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs/
+Logs/
+
+# SQLite database file (if you want to ignore local DB files)
+*.db
+*.sqlite
+
+# Mac files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Visual Studio user/workspace files
+*.slnx.sqlite
+VSWorkspaceState.json
+
+# ------------------------------------
+# React / Node.js / TypeScript
+# ------------------------------------
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Production environment files
+.env.production
+.env.staging
+
+# Sensitive local environment files
+.env.local
+.env.development.local
+.env.test.local
+
+# Testing coverage
+coverage/
+
+# Vite specific
+.vite/
+
+# Cache and logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# EditorState
+.editorconfig
+
+# Optional: lock files (if you're only using one)
+# Uncomment only the one you use and ignore others
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# macOS system files
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+*.db
+*.db-shm
+*.db-wal
