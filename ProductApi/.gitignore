@@ -1,0 +1,70 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# VS Code files
+.vscode/
+
+# DotNet specific files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Publish output
+publish/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.resharper
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# IIS Express
+iisexpress/
+
+# Others
+*.vspscc
+*.vssscc
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs/
+Logs/
+
+# SQLite database file (if you want to ignore local DB files)
+*.db
+*.sqlite
+
+# Mac files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Visual Studio user/workspace files
+*.slnx.sqlite
+VSWorkspaceState.json
